@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactanos</title>
+    <link rel="stylesheet" href="../css/contacto.css">
+</head>
+<body>
+    <section id="contactanos" class="contacto">
+        <h2>¿Requieres de asistencia?</h2>
+        <p>Realiza el siguiente formulario y uno de nuestros asesores de comunicará contigo</p>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo electronico" required>
+            <input type="tel" placeholder="Número de contacto" required>
+            <div class="requerimiento">
+                <label for="razon">Indiquenos su motivo</label>
+                <select name="motivo" id="motivo" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="pqr">Presentar una petición, queja o reclamo</option>
+                    <option value="soporte">Asistencia de soporte técnico</option>
+                    <option value="pedido">Verificación del estado del pedido</option>
+                    <option value="producto">Información sobre uno de nuestros productos</option>
+                    <option value="otro">Otros</option>
+                </select>
+            </div>
+            <textarea placeholder="Mensaje"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+</html>

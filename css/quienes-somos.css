@@ -1,0 +1,353 @@
+/* Importación de Montserrat desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+
+/* Variables de color - Coherentes con la identidad visual */
+:root {
+  --color-primario: #990000;       /* Rojo oscuro - Énfasis */
+  --color-secundario: #FAA61A;     /* Amarillo vibrante - Acciones */
+  --color-neutro-oscuro: #000000;  /* Negro - Fondo principal */
+  --color-neutro-claro: #FFFFFF;   /* Blanco - Texto */
+  --color-acento: #2196D6;         /* Azul medio - Detalles */
+}
+
+/* -----------------------------------------------------------
+   ESTILOS BASE - ESTRUCTURA PRINCIPAL
+   ----------------------------------------------------------- */
+.sobre-nosotros {
+  background-color: var(--color-neutro-oscuro);
+  color: var(--color-neutro-claro);
+  padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 8px solid var(--color-primario);
+}
+
+/* Efecto de borde diagonal decorativo */
+.sobre-nosotros::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(153, 0, 0, 0.1) 0%,
+    rgba(153, 0, 0, 0) 20%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Contenedor principal - Flexbox para diseño responsive */
+.nosotros-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* -----------------------------------------------------------
+   ESTILOS PARA LA IMAGEN - EFECTOS DE HOVER 
+   ----------------------------------------------------------- */
+.video-nosotros {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(153, 0, 0, 0.4);
+  transform: perspective(1000px) rotateY(-5deg);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  border: 3px solid var(--color-primario);
+}
+
+/* Efecto 3D al hacer hover */
+.video-nosotros:hover {
+  transform: perspective(1000px) rotateY(0deg) scale(1.03);
+  box-shadow: 0 25px 60px rgba(153, 0, 0, 0.6);
+}
+
+.video-nosotros img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+/* Brillo al pasar el mouse */
+.video-nosotros::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(250, 166, 26, 0.1) 0%,
+    rgba(250, 166, 26, 0) 70%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.video-nosotros:hover::after {
+  opacity: 1;
+}
+
+/* -----------------------------------------------------------
+   ESTILOS DE TEXTO - TIPOGRAFÍA JERARQUIZADA
+   ----------------------------------------------------------- */
+.texto-nosotros {
+  flex: 1;
+  min-width: 300px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Título principal - Efecto de corte luminoso */
+.texto-nosotros h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+.texto-nosotros h2 strong {
+  color: var(--color-neutro-claro);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Efecto de resaltado con gradiente */
+.highlight {
+  display: block;
+  color: transparent;
+  background: linear-gradient(90deg, var(--color-secundario), var(--color-primario));
+  -webkit-background-clip: text;
+  background-clip: text;
+  line-height: 1.2;
+  margin-top: 0.5rem;
+}
+
+/* Párrafo descriptivo */
+.texto-nosotros p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* Borde decorativo al lado del párrafo */
+.texto-nosotros p::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-primario),
+    var(--color-secundario)
+  );
+}
+
+/* -----------------------------------------------------------
+   LISTA DE VALORES - ICONOS ANIMADOS
+   ----------------------------------------------------------- */
+.valores {
+  margin: 3rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.valores li {
+  margin-bottom: 2rem;
+  padding-left: 3.5rem;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto de levitación al pasar el mouse */
+.valores li:hover {
+  transform: translateX(10px);
+}
+
+/* Iconos de check con animación pulsante */
+.valores i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-secundario);
+  font-size: 2rem;
+  filter: drop-shadow(0 0 5px rgba(250, 166, 26, 0.5));
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.valores strong {
+  color: var(--color-secundario);
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 0.3rem;
+}
+
+.valores em {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  display: block;
+}
+
+/* -----------------------------------------------------------
+   LLAMADO A LA ACCIÓN - BOTÓN CON EFECTO DE ENERGÍA
+   ----------------------------------------------------------- */
+.accion {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.accion h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--color-neutro-claro);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+/* Líneas decorativas alrededor del título */
+.accion h3::before,
+.accion h3::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  width: 50px;
+  background: linear-gradient(90deg, var(--color-primario), transparent);
+}
+
+.accion h3::before {
+  left: -70px;
+}
+
+.accion h3::after {
+  right: -70px;
+  background: linear-gradient(90deg, transparent, var(--color-secundario));
+}
+
+/* Botón principal con efecto de energía */
+.accion-boton {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  background: linear-gradient(
+    180deg,
+    var(--color-primario) 0%,
+    var(--color-secundario) 100%
+  );
+  color: var(--color-neutro-claro);
+  text-decoration: none;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.5s ease;
+  box-shadow: 0 5px 25px rgba(250, 166, 26, 0.4);
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+}
+
+/* Efecto de brillo dinámico */
+.accion-boton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+/* Animación al pasar el mouse */
+.accion-boton:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(250, 166, 26, 0.6);
+}
+
+.accion-boton:hover::before {
+  left: 100%;
+}
+
+/* -----------------------------------------------------------
+   DISEÑO RESPONSIVE - ADAPTACIÓN A DIFERENTES PANTALLAS
+   ----------------------------------------------------------- */
+@media (max-width: 992px) {
+  .nosotros-contenedor {
+    flex-direction: column;
+  }
+  
+  .video-nosotros {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 3rem;
+  }
+  
+  .texto-nosotros h2 {
+    font-size: 2.5rem;
+  }
+  
+  .accion h3::before,
+  .accion h3::after {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .sobre-nosotros {
+    padding: 4rem 1.5rem;
+  }
+  
+  .texto-nosotros h2 {
+    font-size: 2rem;
+  }
+  
+  .valores li {
+    padding-left: 2.5rem;
+    font-size: 1rem;
+  }
+  
+  .accion-boton {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+}

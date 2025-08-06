@@ -1,0 +1,259 @@
+/* Importación de Montserrat desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+
+/* Variables de color - Coherentes con la identidad visual */
+:root {
+  --color-primario: #990000;       /* Rojo oscuro - Énfasis */
+  --color-secundario: #FAA61A;     /* Amarillo vibrante - Acciones */
+  --color-neutro-oscuro: #000000;  /* Negro - Fondo principal */
+  --color-neutro-claro: #FFFFFF;   /* Blanco - Texto */
+  --color-acento: #2196D6;         /* Azul medio - Detalles */
+}
+
+/* 
+ * ESTILOS PARA SECCIÓN DE CONTACTO - VERSIÓN FONDO BLANCO
+ * Mantiene la identidad MatchPoint con un look limpio y profesional
+ * Diseño moderno con buen contraste y elementos destacados
+ */
+
+/* Variables de color actualizadas para tema claro */
+:root {
+  --color-primario: #990000;       /* Rojo corporativo */
+  --color-secundario: #FAA61A;     /* Amarillo corporativo */
+  --color-fondo: #FFFFFF;          /* Blanco */
+  --color-texto: #333333;          /* Gris oscuro para texto */
+  --color-borde: #E0E0E0;          /* Gris claro para bordes */
+  --color-acento: #2196D6;         /* Azul para detalles */
+}
+
+/* -----------------------------------------------------------
+   ESTRUCTURA BASE Y ESTILOS GENERALES - TEMA CLARO
+   ----------------------------------------------------------- */
+.contacto {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
+  border-top: 8px solid var(--color-secundario);
+}
+
+/* Patrón de líneas diagonales sutiles de fondo */
+.contacto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      rgba(153, 0, 0, 0.02) 0px,
+      rgba(153, 0, 0, 0.02) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Contenedor principal del formulario */
+.contacto form {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  background-color: var(--color-fondo);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* -----------------------------------------------------------
+   ESTILOS TIPOGRÁFICOS Y TÍTULOS - TEMA CLARO
+   ----------------------------------------------------------- */
+.contacto h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--color-primario);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 1rem;
+  grid-column: span 2;
+}
+
+/* Subrayado decorativo del título */
+.contacto h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--color-primario),
+    var(--color-secundario)
+  );
+  border-radius: 2px;
+}
+
+.contacto p {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--color-texto);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column: span 2;
+  opacity: 0.8;
+}
+
+/* -----------------------------------------------------------
+   ESTILOS PARA LOS ELEMENTOS DEL FORMULARIO - TEMA CLARO
+   ----------------------------------------------------------- */
+.contacto input,
+.contacto select,
+.contacto textarea {
+  width: auto;
+  padding: 1rem;
+  border: 2px solid var(--color-borde);
+  border-radius: 8px;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Efecto al enfocar los campos */
+.contacto input:focus,
+.contacto select:focus,
+.contacto textarea:focus {
+  border-color: var(--color-secundario);
+  box-shadow: 0 0 0 3px rgba(250, 166, 26, 0.2);
+}
+
+/* Placeholders estilizados */
+.contacto input::placeholder,
+.contacto textarea::placeholder {
+  color: rgba(51, 51, 51, 0.4);
+}
+
+/* Contenedor del select personalizado */
+.requerimiento {
+  grid-column: span 2;
+  position: relative;
+}
+
+.requerimiento label {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--color-primario);
+  font-size: 1.1rem;
+}
+
+/* Estilo personalizado para el select */
+.requerimiento select {
+  appearance: none;
+  background-image: 
+    linear-gradient(45deg, transparent 50%, var(--color-primario) 50%),
+    linear-gradient(135deg, var(--color-primario) 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(1em + 4px),
+    calc(100% - 15px) calc(1em + 4px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* Área de texto - Ocupa dos columnas */
+.contacto textarea {
+  grid-column: span 2;
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* -----------------------------------------------------------
+   BOTÓN DE ENVÍO - ESTILO MODERNO EN TEMA CLARO
+   ----------------------------------------------------------- */
+.contacto button[type="submit"] {
+  grid-column: span 2;
+  padding: 1.2rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-primario) 0%,
+    var(--color-secundario) 100%
+  );
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+  box-shadow: 0 4px 15px rgba(153, 0, 0, 0.2);
+}
+
+/* Efecto hover más sutil para tema claro */
+.contacto button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(153, 0, 0, 0.3);
+}
+
+/* -----------------------------------------------------------
+   DISEÑO RESPONSIVE - ADAPTACIÓN A MÓVILES
+   ----------------------------------------------------------- */
+@media (max-width: 768px) {
+  .contacto form {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+  
+  .requerimiento,
+  .contacto textarea,
+  .contacto button[type="submit"] {
+    grid-column: span 1;
+  }
+  
+  .contacto h2 {
+    font-size: 2.2rem;
+  }
+  
+  .contacto p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacto {
+    padding: 4rem 1rem;
+  }
+  
+  .contacto h2 {
+    font-size: 1.8rem;
+  }
+  
+  .contacto form {
+    padding: 1.2rem;
+  }
+}
