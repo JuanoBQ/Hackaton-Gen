@@ -213,5 +213,11 @@ body {
     }
 }
 
+/* Ajuste para los enlaces de navegación */
+.Navbar a.boton {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Mantiene el color de texto original */
+  }
+
 
 /* fin css del nav por Yohana V. */

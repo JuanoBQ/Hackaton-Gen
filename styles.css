@@ -756,8 +756,8 @@ body {
 
 .boton:hover {
     transform: translateY(-3px);
-    background-color: #990000;
-    color: #FFFFFF;
+    background-color: var(--color-secundario);
+    color: #000000;
 }
 
 /* Estilos para el formulario de búsqueda */
@@ -1221,4 +1221,10 @@ body {
     background: rgba(255, 255, 255, 0.85);
     padding: 20px;
   }
+}
+
+/* Ajuste para los enlaces de navegación */
+.Navbar a.boton {
+  text-decoration: none;
+  color: inherit;
 }

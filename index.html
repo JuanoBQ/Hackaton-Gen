@@ -12,34 +12,28 @@
   </head>
   <body>
 
-
-
-    <!-- ----------- NAV BAR ----------- -->
-        <nav class="Navbar">
-        <div class="container-nav">
+    <header>
+        <nav class="container-nav">
             <div class="Logo">
-                <img src="../img/MatchPoint11.png" alt="1">
-                <button class="boton inicio" type="submit"> Inicio </button>
-                <button class="boton productos destacados" type="submit">Productos destacados </button>
-                <button class="boton quienes somos" type="submit"> Quienes somos </button>
-                <button class="boton contactenos" type="submit"> Contactenos </button>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar">
-                    <button class="boton buscar" type="submit">Buscar</button>
-                </form>
-                <div class="cart-container">
-                    <a href="#" class="cart-icon">
-                        <i class="bi bi-cart3"></i>
-                        <span class="cart-count">0</span>
-                    </a>
-                </div>
+                <!-- Logo único -->
+                <img src="./img/MatchPoint11.png" alt="Logo de Match Point">
             </div>
-        </div>
-    </nav>
-
-
-
-
+            <a class="boton inicio" href="#"> Inicio </a>
+            <a class="boton productos-destacados" href="#productos">Productos destacados </a>
+            <a class="boton quienes-somos" href="#quienes-somos"> Quienes somos </a>
+            <a class="boton contactenos" href="#contacto"> Contactenos </a>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar">
+                <button class="boton buscar" type="submit">Buscar</button>
+            </form>
+            <div class="cart-container">
+                <a href="#" class="cart-icon">
+                    <i class="bi bi-cart3"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
 
     <!-- ----------- CAROUSEL ----------- -->
 
@@ -226,7 +220,7 @@
 
 
 <!-- ----- ACCESORIOS ----- -->
-<div class="container mt-5">
+<div id="productos" class="container mt-5">
   <h3 class="mb-4 fw-bold text-uppercase" style="color: #990000;">🎾 Accesorios</h3>
 
   <div class="carousel-wrapper position-relative">
@@ -303,7 +297,7 @@
     <!-- ----------------- QUIENES SOMOS ---------------- -->
 
     <!-- Desarrollo de sección para la presentación de la organización -->
-    <section class="sobre-nosotros mt-5 pt-5" id="nosotros">
+    <section id="quienes-somos" class="sobre-nosotros mt-5 pt-5">
         <div class="nosotros-contenedor">
             <!-- Contendor para imagen referente -->
             <div class="video-nosotros">
@@ -339,7 +333,7 @@
 
     <!-- --------- CONTACTANOS ------------- -->
 
-    <section id="contactanos" class="contacto">
+    <section id="contacto" class="contacto">
         <h2>¿Requieres de asistencia?</h2>
         <p>Realiza el siguiente formulario y uno de nuestros asesores de comunicará contigo</p>
         <form>
