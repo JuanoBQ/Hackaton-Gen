@@ -1087,3 +1087,138 @@ footer {
         justify-content: center;
     }
 }
+
+
+/* ========== COROUSEL ============== */
+
+
+body {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+/* Contenedor general con imagen de fondo */
+.imgen-carusel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0%;
+  margin: 0%;
+}
+
+.imgen-carusel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9) contrast(1.1);
+  image-rendering: optimizeQuality;
+  transition: transform 0.5s ease;
+}
+
+.imgen-carusel:hover img {
+  transform: scale(1.03);
+}
+
+/* Degradado para mejorar contraste del texto */
+.degradado {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), transparent 70%);
+  z-index: 1;
+}
+
+/* Posicionamiento del contenido encima de la imagen */
+.descripcion-carusel {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 100%;
+  max-width: 400px;
+  animation: slideIn 0.8s ease-out forwards;
+  padding: 0%;
+  margin: 0%;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+/* Tarjeta estilo glassmorphism */
+.card-producto {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 30px;
+  color: black;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+}
+
+/* Título */
+.card-producto h2,
+.titulo-producto {
+  font-size: 68px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Párrafo */
+.card-producto p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Botón */
+.boton-producto {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.boton-producto:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .descripcion-carusel {
+    top: auto;
+    bottom: 30px;
+    right: 50%;
+    transform: translateX(50%);
+    text-align: center;
+  }
+
+  .card-producto h2 {
+    font-size: 36px;
+  }
+
+  .card-producto {
+    backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+  }
+}
