@@ -103,15 +103,6 @@
 /* Importación de Montserrat desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
 
-/* Variables de color - Coherentes con la identidad visual */
-:root {
-  --color-primario: #990000;       /* Rojo oscuro - Énfasis */
-  --color-secundario: #FAA61A;     /* Amarillo vibrante - Acciones */
-  --color-neutro-oscuro: #000000;  /* Negro - Fondo principal */
-  --color-neutro-claro: #FFFFFF;   /* Blanco - Texto */
-  --color-acento: #2196D6;         /* Azul medio - Detalles */
-}
-
 /* -----------------------------------------------------------
    ESTILOS BASE - ESTRUCTURA PRINCIPAL
    ----------------------------------------------------------- */
@@ -462,14 +453,6 @@
 /* Importación de Montserrat desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
 
-/* Variables de color - Coherentes con la identidad visual */
-:root {
-  --color-primario: #990000;       /* Rojo oscuro - Énfasis */
-  --color-secundario: #FAA61A;     /* Amarillo vibrante - Acciones */
-  --color-neutro-oscuro: #000000;  /* Negro - Fondo principal */
-  --color-neutro-claro: #FFFFFF;   /* Blanco - Texto */
-  --color-acento: #2196D6;         /* Azul medio - Detalles */
-}
 
 /* 
  * ESTILOS PARA SECCIÓN DE CONTACTO - VERSIÓN FONDO BLANCO

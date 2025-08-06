@@ -237,12 +237,11 @@ startAutoplay();
 
 
 
-// script.js
 
 document.addEventListener('DOMContentLoaded', () => {
   const cart = [];
-  
-  // Referencias DOM
+ 
+
   const cartCount = document.getElementById('cartCount');
   const cartItemsContainer = document.getElementById('cartItems');
   const cartTotal = document.getElementById('cartTotal');
@@ -251,18 +250,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeCartBtn = document.getElementById('closeCart');
   const clearCartBtn = document.getElementById('clearCart');
 
-  // Función para formatear número a moneda (COP)
+  // Función para formatear número a moneda
   function formatPrice(price) {
     return new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(price);
   }
 
-  // Actualiza contador en icono carrito
+  // Contador
   function updateCartCount() {
     const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
     cartCount.textContent = totalQuantity;
   }
 
-  // Calcula y actualiza total
+  // Calculos
   function updateCartTotal() {
     const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
     cartTotal.textContent = formatPrice(total);
@@ -298,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateCartTotal();
 
-    // Agregar event listener a botones eliminar
+    // Eliminar items del carrito
     document.querySelectorAll('.remove-item').forEach(button => {
       button.addEventListener('click', (e) => {
         const idx = e.target.getAttribute('data-index');
