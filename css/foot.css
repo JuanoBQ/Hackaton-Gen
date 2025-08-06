@@ -1,2 +1,153 @@
-*
-/* css del foot por Yohana V. */
+
+/* Estilos de foot por Yohana V. */
+
+/* Body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #0c0c0c;
+    color: white;
+    padding: 40px 0 20px 0;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Grid principal del footer */
+.footer-content {
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Sección Match Point */
+.brand-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.logo img {
+    height: 150px;
+    width: 200px;
+    border: 0;
+    filter: brightness(1.1);
+}
+
+.brand-section h5 {
+    font-weight: bold;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: ;
+    text-align: center;
+} */
+
+.brand-section p {
+    margin: 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    color: #ffffff;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* Secciones de enlaces, contacto y redes sociales */
+.footer-section h6 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    color: #FAA61A;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.footer-section a:hover {
+    opacity: 0.8;
+}
+
+/* Información de contacto */
+.contact-info p {
+    color: #FAA61A;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-info i {
+    font-size: 1.1rem;
+}
+
+/* Redes sociales */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: translateY(-2px);
+}
+
+/* Copyright */
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
