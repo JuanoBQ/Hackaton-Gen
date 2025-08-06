@@ -15,27 +15,44 @@
 
 
     <!-- ----------- NAV BAR ----------- -->
-        <nav class="Navbar">
-        <div class="container-nav">
-            <div class="Logo">
-                <img src="../img/MatchPoint11.png" alt="1">
-                <button class="boton inicio" type="submit"> Inicio </button>
-                <button class="boton productos destacados" type="submit">Productos destacados </button>
-                <button class="boton quienes somos" type="submit"> Quienes somos </button>
-                <button class="boton contactenos" type="submit"> Contactenos </button>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar">
-                    <button class="boton buscar" type="submit">Buscar</button>
-                </form>
-                <div class="cart-container">
-                    <a href="#" class="cart-icon">
-                        <i class="bi bi-cart3"></i>
-                        <span class="cart-count">0</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <nav class="Navbar">
+  <div class="container-nav">
+    <div class="Logo">
+      <img src="../img/MatchPoint11.png" alt="1" />
+      <a class="boton inicio" href="#inicio">Inicio</a>
+      <a class="boton inicio" href="#productos">Productos Destacados</a>
+      <a class="boton inicio" href="#nosotros">Quienes Somos</a>
+      <a class="boton inicio" href="#contactanos">Contactenos</a>
+
+      <form class="d-flex" role="search" onsubmit="return false;">
+        <input class="form-control me-2" type="search" placeholder="Buscar" />
+        <button class="boton buscar" type="submit">Buscar</button>
+      </form>
+
+      <!-- Contenedor carrito -->
+      <div class="cart-container">
+        <a href="#" class="cart-icon" id="openCart">
+          <i class="bi bi-cart3"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Modal carrito -->
+<div id="cartModal" class="cart-modal">
+  <div class="cart-modal-content">
+    <span id="closeCart" class="close-btn">&times;</span>
+    <h2>Carrito de Compras</h2>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-total">
+      <strong>Total: </strong><span id="cartTotal">$0</span>
+    </div>
+    <button id="clearCart" class="btn btn-danger">Vaciar carrito</button>
+  </div>
+</div>
+
 
 
 
@@ -49,28 +66,7 @@
       data-bs-ride="carousel"
       data-bs-interval="3000"
     >
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
+      
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="imgen-carusel">
@@ -152,7 +148,8 @@
     <!-- ----------- PRODUCTOS ----------- -->
      
     <!-- ----------- RAQUETAS ----------- -->
-    <div class="container mt-5 b">
+     <section id="productos">
+      <div class="container mt-5 b">
   <h3 class="mb-4 fw-bold text-uppercase" style="color: #990000;">🎾 Raquetas</h3>
 
   <div class="carousel-wrapper position-relative">
@@ -297,6 +294,8 @@
     </div>
   </div>
 </div>
+     </section>
+    
 
 
 
@@ -380,8 +379,8 @@
             <h6>ENLACES</h6>
             <ul>
               <li><a href="#">Inicio</a></li>
-              <li><a href="#">Productos</a></li>
-              <li><a href="#">Contacto</a></li>
+              <li><a href="#productos">Productos</a></li>
+              <li><a href="#contactanos">Contacto</a></li>
             </ul>
           </div>
           <div class="footer-section contact-info">
@@ -406,7 +405,7 @@
     </footer>
 
 
-
+    
 
 
 
