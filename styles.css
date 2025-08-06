@@ -103,15 +103,6 @@
 /* Importación de Montserrat desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
 
-/* Variables de color - Coherentes con la identidad visual */
-:root {
-  --color-primario: #990000;       /* Rojo oscuro - Énfasis */
-  --color-secundario: #FAA61A;     /* Amarillo vibrante - Acciones */
-  --color-neutro-oscuro: #000000;  /* Negro - Fondo principal */
-  --color-neutro-claro: #FFFFFF;   /* Blanco - Texto */
-  --color-acento: #2196D6;         /* Azul medio - Detalles */
-}
-
 /* -----------------------------------------------------------
    ESTILOS BASE - ESTRUCTURA PRINCIPAL
    ----------------------------------------------------------- */
@@ -462,14 +453,6 @@
 /* Importación de Montserrat desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
 
-/* Variables de color - Coherentes con la identidad visual */
-:root {
-  --color-primario: #990000;       /* Rojo oscuro - Énfasis */
-  --color-secundario: #FAA61A;     /* Amarillo vibrante - Acciones */
-  --color-neutro-oscuro: #000000;  /* Negro - Fondo principal */
-  --color-neutro-claro: #FFFFFF;   /* Blanco - Texto */
-  --color-acento: #2196D6;         /* Azul medio - Detalles */
-}
 
 /* 
  * ESTILOS PARA SECCIÓN DE CONTACTO - VERSIÓN FONDO BLANCO
@@ -1217,14 +1200,72 @@ body {
   }
 
   .card-producto {
-    backdrop-filter: none;
     background: rgba(255, 255, 255, 0.85);
     padding: 20px;
   }
 }
 
-/* Ajuste para los enlaces de navegación */
-.Navbar a.boton {
-  text-decoration: none;
-  color: inherit;
+
+
+/* =================== CARRITO DE COMPRAS ================== */
+
+
+.cart-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.cart-modal.show {
+  display: flex;
+}
+
+.cart-modal-content {
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.cart-items {
+  margin: 1rem 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.cart-total {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  text-align: right;
+}
+
+.btn-danger {
+  background-color: #ae2012;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
 }
